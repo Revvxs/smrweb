@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -68,7 +69,16 @@
     let currentIndex = 0;
 
     function updateLogoText() {
-      logoContainer.innerHTML = logoTexts[currentIndex];
+      const text = logoTexts[currentIndex];
+      logoContainer.innerHTML = '';
+      const regex = /&#([0-9A-F]{6})&l(.)/g;
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        const span = document.createElement('span');
+        span.style.color = `#${match[1]}`;
+        span.textContent = match[2];
+        logoContainer.appendChild(span);
+      }
       currentIndex = (currentIndex + 1) % logoTexts.length;
     }
 
