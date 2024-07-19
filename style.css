@@ -43,7 +43,9 @@ main {
   margin: auto;
 }
 
-body {
+.rainbow-text {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
   -moz-background-clip: text; /* Firefox support */
   -webkit-background-clip: text; /* Safari support */
@@ -51,11 +53,6 @@ body {
   -moz-background-size: 100% 100%; /* Firefox support */
   -webkit-background-size: 100% 100%; /* Safari support */
   background-size: 100% 100%;
-}
-
-.rainbow-text {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
 .rainbow-text:hover {
