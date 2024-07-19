@@ -1,6 +1,15 @@
 <html>
 <head>
-  <title>About Us</title>
+<title id="title"></title>
+		<script>
+			let titleElement = document.getElementById("title");
+			let titleArray = ["A", "Ab", "Abo ", "Abou", "About", "About ", "About U", "About Us", "About U", " About ", "Abou", "Abo","Ab", " "];
+			let titleIndex = 0;
+			setInterval(function() {
+				titleElement.textContent = titleArray[titleIndex];
+				titleIndex = (titleIndex + 1) % titleArray.length;
+			}, 300);
+		</script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
     .header {
