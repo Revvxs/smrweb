@@ -36,6 +36,18 @@
   </script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
     .header {
       display: none;
     }
@@ -47,6 +59,12 @@
       text-shadow: 1px 1px 8px #000;
       margin-top: 20px;
       text-align: center;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
     }
   </style>
 </head>
