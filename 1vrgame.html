@@ -14,21 +14,49 @@
 </head>
 <body>
    <h1 style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Information:</h1>
-  <p  style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Discord Link: NA</p>
-  <p  style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Info:</p>
+  <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Discord Link: NA</p>
+  <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Info:</p>
   <ul>
-    <li  style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Title ID:</strong> NA</li>
-    <li  style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Voice:</strong> NA</li>
-    <li   style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Shit:</strong> NA</li>
-    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Dev Key:</strong> NA</li>
-    <li  style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Assembly-Csharp Download:</strong> NA</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Title ID: NA</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Voice: NA</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Shit: NA</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Dev Key: NA</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Assembly-Csharp Download: NA</li>
   </ul>
     <div id="logo-container"></div>
 
     <script>
         const logoContainer = document.getElementById('logo-container');
+        const changeInterval = 50;
         const logoTexts = [
-            "&#00FFE0&lP&#12EBE2&lu&#24D8E5&ll&#36C4E7&ll&#48B1EA&le&#5A9DEC&ld &#7F76F1&lB&#9162F3&ly &#B53BF8&lM&#C727FA&lr&#D914FD&l.&#EB00FF&lE"
+            "&#D914FD&lP&#C727FA&lu&#B53BF8&ll&#A34EF5&ll&#9162F3&le&#7F76F1&ld &#6C89EE&lB&#5A9DEC&ly &#48B1EA&lM&#36C4E7&lr&#24D8E5&l.&#12EBE2&lE",
+            "&#EB00FF&lP&#D914FD&lu&#C727FA&ll&#B53BF8&ll&#A34EF5&le&#9162F3&ld &#7F76F1&lB&#6C89EE&ly &#5A9DEC&lM&#48B1EA&lr&#36C4E7&l.&#24D8E5&lE",
+            "&#D914FD&lP&#EB00FF&lu&#D914FD&ll&#C727FA&ll&#B53BF8&le&#A34EF5&ld &#9162F3&lB&#7F76F1&ly &#6C89EE&lM&#5A9DEC&lr&#48B1EA&l.&#36C4E7&lE",
+            "&#C727FA&lP&#D914FD&lu&#EB00FF&ll&#D914FD&ll&#C727FA&le&#B53BF8&ld &#A34EF5&lB&#9162F3&ly &#7F76F1&lM&#6C89EE&lr&#5A9DEC&l.&#48B1EA&lE",
+            "&#B53BF8&lP&#C727FA&lu&#D914FD&ll&#EB00FF&ll&#D914FD&le&#C727FA&ld &#B53BF8&lB&#A34EF5&ly &#9162F3&lM&#7F76F1&lr&#6C89EE&l.&#5A9DEC&lE",
+            "&#A34EF5&lP&#B53BF8&lu&#C727FA&ll&#D914FD&ll&#EB00FF&le&#D914FD&ld &#C727FA&lB&#B53BF8&ly &#A34EF5&lM&#9162F3&lr&#7F76F1&l.&#6C89EE&lE",
+            "&#9162F3&lP&#A34EF5&lu&#B53BF8&ll&#C727FA&ll&#D914FD&le&#EB00FF&ld &#D914FD&lB&#C727FA&ly &#B53BF8&lM&#A34EF5&lr&#9162F3&l.&#7F76F1&lE",
+            "&#7F76F1&lP&#9162F3&lu&#A34EF5&ll&#B53BF8&ll&#C727FA&le&#D914FD&ld &#EB00FF&lB&#D914FD&ly &#C727FA&lM&#B53BF8&lr&#A34EF5&l.&#9162F3&lE",
+            "&#6C89EE&lP&#7F76F1&lu&#9162F3&ll&#A34EF5&ll&#B53BF8&le&#C727FA&ld &#D914FD&lB&#EB00FF&ly &#D914FD&lM&#C727FA&lr&#B53BF8&l.&#A34EF5&lE",
+            "&#5A9DEC&lP&#6C89EE&lu&#7F76F1&ll&#9162F3&ll&#A34EF5&le&#B53BF8&ld &#C727FA&lB&#D914FD&ly &#EB00FF&lM&#D914FD&lr&#C727FA&l.&#B53BF8&lE",
+            "&#48B1EA&lP&#5A9DEC&lu&#6C89EE&ll&#7F76F1&ll&#9162F3&le&#A34EF5&ld &#B53BF8&lB&#C727FA&ly &#D914FD&lM&#EB00FF&lr&#D914FD&l.&#C727FA&lE",
+            "&#36C4E7&lP&#48B1EA&lu&#5A9DEC&ll&#6C89EE&ll&#7F76F1&le&#9162F3&ld &#A34EF5&lB&#B53BF8&ly &#C727FA&lM&#D914FD&lr&#EB00FF&l.&#D914FD&lE",
+            "&#24D8E5&lP&#36C4E7&lu&#48B1EA&ll&#5A9DEC&ll&#6C89EE&le&#7F76F1&ld &#9162F3&lB&#A34EF5&ly &#B53BF8&lM&#C727FA&lr&#D914FD&l.&#EB00FF&lE",
+            "&#12EBE2&lP&#24D8E5&lu&#36C4E7&ll&#48B1EA&ll&#5A9DEC&le&#6C89EE&ld &#7F76F1&lB&#9162F3&ly &#A34EF5&lM&#B53BF8&lr&#C727FA&l.&#D914FD&lE",
+            "&#12EBE2&lP&#24D8E5&lu&#36C4E7&ll&#48B1EA&ll&#5A9DEC&le&#6C89EE&ld &#7F76F1&lB&#9162F3&ly &#A34EF5&lM&#B53BF8&lr&#C727FA&l.&#D914FD&lE",
+            "&#24D8E5&lP&#36C4E7&lu&#48B1EA&ll&#5A9DEC&ll&#6C89EE&le&#7F76F1&ld &#9162F3&lB&#A34EF5&ly &#B53BF8&lM&#C727FA&lr&#D914FD&l.&#EB00FF&lE",
+            "&#36C4E7&lP&#48B1EA&lu&#5A9DEC&ll&#6C89EE&ll&#7F76F1&le&#9162F3&ld &#A34EF5&lB&#B53BF8&ly &#C727FA&lM&#D914FD&lr&#EB00FF&l.&#D914FD&lE",
+            "&#48B1EA&lP&#5A9DEC&lu&#6C89EE&ll&#7F76F1&ll&#9162F3&le&#A34EF5&ld &#B53BF8&lB&#C727FA&ly &#D914FD&lM&#EB00FF&lr&#D914FD&l.&#C727FA&lE",
+            "&#5A9DEC&lP&#6C89EE&lu&#7F76F1&ll&#9162F3&ll&#A34EF5&le&#B53BF8&ld &#C727FA&lB&#D914FD&ly &#EB00FF&lM&#D914FD&lr&#C727FA&l.&#B53BF8&lE",
+            "&#6C89EE&lP&#7F76F1&lu&#9162F3&ll&#A34EF5&ll&#B53BF8&le&#C727FA&ld &#D914FD&lB&#EB00FF&ly &#D914FD&lM&#C727FA&lr&#B53BF8&l.&#A34EF5&lE",
+            "&#7F76F1&lP&#9162F3&lu&#A34EF5&ll&#B53BF8&ll&#C727FA&le&#D914FD&ld &#EB00FF&lB&#D914FD&ly &#C727FA&lM&#B53BF8&lr&#A34EF5&l.&#9162F3&lE",
+            "&#9162F3&lP&#A34EF5&lu&#B53BF8&ll&#C727FA&ll&#D914FD&le&#EB00FF&ld &#D914FD&lB&#C727FA&ly &#B53BF8&lM&#A34EF5&lr&#9162F3&l.&#7F76F1&lE",
+            "&#A34EF5&lP&#B53BF8&lu&#C727FA&ll&#D914FD&ll&#EB00FF&le&#D914FD&ld &#C727FA&lB&#B53BF8&ly &#A34EF5&lM&#9162F3&lr&#7F76F1&l.&#6C89EE&lE",
+            "&#B53BF8&lP&#C727FA&lu&#D914FD&ll&#EB00FF&ll&#D914FD&le&#C727FA&ld &#B53BF8&lB&#A34EF5&ly &#9162F3&lM&#7F76F1&lr&#6C89EE&l.&#5A9DEC&lE",
+            "&#C727FA&lP&#D914FD&lu&#EB00FF&ll&#D914FD&ll&#C727FA&le&#B53BF8&ld &#A34EF5&lB&#9162F3&ly &#7F76F1&lM&#6C89EE&lr&#5A9DEC&l.&#48B1EA&lE",
+            "&#D914FD&lP&#EB00FF&lu&#D914FD&ll&#C727FA&ll&#B53BF8&le&#A34EF5&ld &#9162F3&lB&#7F76F1&ly &#6C89EE&lM&#5A9DEC&lr&#48B1EA&l.&#36C4E7&lE",
+            "&#EB00FF&lP&#D914FD&lu&#C727FA&ll&#B53BF8&ll&#A34EF5&le&#9162F3&ld &#7F76F1&lB&#6C89EE&ly &#5A9DEC&lM&#48B1EA&lr&#36C4E7&l.&#24D8E5&lE",
+            "&#D914FD&lP&#C727FA&lu&#B53BF8&ll&#A34EF5&ll&#9162F3&le&#7F76F1&ld &#6C89EE&lB&#5A9DEC&ly &#48B1EA&lM&#36C4E7&lr&#24D8E5&l.&#12EBE2&lE"
         ];
         let currentIndex = 0;
 
@@ -46,7 +74,7 @@
             currentIndex = (currentIndex + 1) % logoTexts.length;
         }
 
-        setInterval(updateLogoText, 50);
+        setInterval(updateLogoText, changeInterval);
         updateLogoText(); // Initial call to set the first text
     </script>
 </body>
