@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = e.target.getAttribute('href');
       const paragraphs = document.querySelectorAll('section p');
       paragraphs.forEach((paragraph) => {
-        paragraph.textContent = '';
+        paragraph.classList.remove('active');
       });
-      document.querySelector(targetId + ' p').textContent = `You are now on the ${targetId.replace('#', '')} page.`;
+      document.querySelector(targetId + ' p').classList.add('active');
     });
   });
 });
