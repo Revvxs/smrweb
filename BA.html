@@ -1,56 +1,11 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ban All</title>
     <link rel="stylesheet" href="style.css">
- <style>
-        form {
-            color: #666666; /* Set the text color of form elements to dim gray (#666666) */
-        }
-    </style>
 </head>
 <body>
-<form action="/ban_players" method="post">
-  <h2>Ban All</h2>
-  <label for="playfab_id">PlayFab ID:</label>
-  <input type="text" id="playfab_id" name="playfab_id"><br><br>
-  <label for="secret_key">Secret Key:</label>
-  <input type="password" id="secret_key" name="secret_key"><br><br>
-  <label for="reason">Reason:</label>
-  <input type="text" id="reason" name="reason"><br><br>
-  <label for="duration_hours">Duration (hours):</label>
-  <input type="number" id="duration_hours" name="duration_hours"><br><br>
-  <input type="submit" value="Ban Players">
-</form>
-
-<div id="logo-container"></div>
-
-<script>
-    const logoContainer = document.getElementById('logo-container');
-    const changeInterval = 50;
-    const logoTexts = [
-        "&#CB2D3E&lB&#D1313D&la&#D7363D&ln &#E33E3B&lA&#E9433B&ll&#EF473A&ll"
-    ];
-    let currentIndex = 0;
-
-    function updateLogoText() {
-        const text = logoTexts[currentIndex];
-        logoContainer.innerHTML = '';
-        const regex = /&#([0-9A-F]{6})&l(.)/g;
-        let match;
-        while ((match = regex.exec(text)) !== null) {
-            const span = document.createElement('span');
-            span.style.color = `#${match[1]}`;
-            span.textContent = match[2];
-            logoContainer.appendChild(span);
-        }
-        currentIndex = (currentIndex + 1) % logoTexts.length;
-    }
-
-    setInterval(updateLogoText, changeInterval);
-    updateLogoText(); // Initial call to set the first text
-</script>
+<iframe src="https://repl.it/@zoidedzzzz/VSP-Ban-All-1?embed" width="100%" height="500"></iframe>
 </body>
 </html>
