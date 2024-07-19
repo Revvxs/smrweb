@@ -62,10 +62,130 @@ main {
 }
 
 @keyframes rainbow-anim {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+0% {
+			background: linear-gradient(to right, #ff0000, #ffa500);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		5% {
+			background: linear-gradient(to right, #ffa500, #ffff00);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		10% {
+			background: linear-gradient(to right, #ffff00, #00ff00);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		15% {
+			background: linear-gradient(to right, #00ff00, #00ffff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		20% {
+			background: linear-gradient(to right, #00ffff, #0000ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		25% {
+			background: linear-gradient(to right, #0000ff, #8b00ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		30% {
+			background: linear-gradient(to right, #8b00ff, #ff00ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		35% {
+			background: linear-gradient(to right, #ff00ff, #ff69b4);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		40% {
+			background: linear-gradient(to right, #ff69b4, #ff0000);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		45% {
+			background: linear-gradient(to right, #ff0000, #ffa500);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		50% {
+			background: linear-gradient(to right, #ffa500, #ffff00);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		55% {
+			background: linear-gradient(to right, #ffff00, #00ff00);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		60% {
+			background: linear-gradient(to right, #00ff00, #00ffff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		65% {
+			background: linear-gradient(to right, #00ffff, #0000ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		70% {
+			background: linear-gradient(to right, #0000ff, #8b00ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		75% {
+			background: linear-gradient(to right, #8b00ff, #ff00ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		80% {
+			background: linear-gradient(to right, #ff00ff, #ff69b4);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		85% {
+			background: linear-gradient(to right, #ff69b4, #ff0000);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		90% {
+			background: linear-gradient(to right, #ff0000, #ffa500);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		95% {
+			background: linear-gradient(to right, #ffa500, #ffff00);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
+		100% {
+			background: linear-gradient(to right, #ffff00, #00ff00);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+		}
 }
