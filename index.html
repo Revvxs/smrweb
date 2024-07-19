@@ -36,17 +36,34 @@
   </script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
-    .header {
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background-color: #000;
+    }
+    header {
       display: none;
+    }
+    main {
+      flex: 1;
+    }
+    #hero {
+      padding: 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
     }
     #logo-container {
       font-size: 2em;
       font-weight: bold;
-      font-family: Arial, sans-serif;
-      color: #fff;
       text-shadow: 1px 1px 8px #000;
-      margin-top: 20px;
-      text-align: center;
     }
   </style>
 </head>
@@ -61,9 +78,9 @@
   </header>
   <main>
     <section id="hero">
-      <h1 style="font-size:18px;color:#fff;text-shadow:1px 1px 8px #000;">Welcome to FC Modders Website</h1>
-      <p style="font-size:18px;color:#fff;text-shadow:1px 1px 8px #000;">This is the home page</p>
-      <p style="font-size:18px;color:#fff;text-shadow:1px 1px 8px #000;">I know I suck at coding</p>
+      <h1 style="font-size:18px;">Welcome to FC Modders Website</h1>
+      <p style="font-size:18px;">This is the home page</p>
+      <p style="font-size:18px;">I know I suck at coding</p>
     </section>
   </main>
   <footer>
