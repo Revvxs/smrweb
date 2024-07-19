@@ -6,13 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = e.target.getAttribute('href');
       const sections = document.querySelectorAll('section');
       sections.forEach((section) => {
-        if (section.id !== targetId.substring(1)) { // Subtract the '#' from the targetId
-          section.classList.remove('active');
-        }
-        if (section.id === targetId.substring(1)) { // Subtract the '#' from the targetId
-          section.classList.add('active');
-        }
+        section.classList.remove('active');
       });
+      document.getElementById(targetId.substring(1)).classList.add('active');
     });
   });
 });
