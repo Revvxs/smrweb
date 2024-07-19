@@ -9,13 +9,13 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #444;
-  background-color: #f9f9f9;
+  color: #fff; /* White text */
+  background-color: #333; /* Black background */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #ccc; /* Dim gray text */
 }
 
 h1 {
@@ -84,9 +84,7 @@ main {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  background-color: #333; /* Black background */
 }
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
