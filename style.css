@@ -46,13 +46,19 @@ main {
 .rainbow-text {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
-  -moz-background-clip: text; /* Firefox support */
-  -webkit-background-clip: text; /* Safari support */
-  background-clip: text; /* Standard syntax */
-  -moz-background-size: 100% 100%; /* Firefox support */
-  -webkit-background-size: 100% 100%; /* Safari support */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   background-size: 100% 100%;
+  background-image: 
+    linear-gradient(to right, 
+      rgba(255, 0, 0, .5), 
+      rgba(255, 127, 0, .5), 
+      rgba(255, 255, 0, .5), 
+      rgba(0, 255, 0, .5), 
+      rgba(0, 255, 255, .5), 
+      rgba(0, 0, 255, .5), 
+      rgba(255, 0, 255, .5));
 }
 
 .rainbow-text:hover {
