@@ -1,0 +1,6 @@
+baseurl: /
+paginate: never
+lsi: false
+header:
+  title: My Website
+  tagline: null
