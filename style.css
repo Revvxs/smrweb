@@ -46,10 +46,8 @@ main {
 .rainbow-text {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-size: 100% 100%;
+  -webkit-text-fill-color: transparent; /* For Opera GX */
+  -webkit-background-clip: text; /* For Opera GX */
   background-image: 
     linear-gradient(to right, 
       rgba(255, 0, 0, .5), 
