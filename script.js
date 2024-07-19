@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
       paragraphs.forEach((paragraph) => {
         paragraph.textContent = '';
       });
-      document.querySelector(targetId.replace('#', ' section p')).textContent = `You are now on the ${targetId.replace('#', '')} page.`;
+      const targetParagraph = document.querySelector(`#${targetId.replace('#', '')}`);
+      targetParagraph.textContent = `You are now on the ${targetId.replace('#', '')} page.`;
     });
   });
 });
