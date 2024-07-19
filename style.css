@@ -81,3 +81,33 @@ main {
   max-width: 800px;
   margin: auto;
 }
+/* Q&A Styles */
+
+#qna {
+  max-width: 800px;
+  margin: auto;
+}
+
+.question-box {
+  border-bottom: 1px solid #ccc;
+}
+
+.question-box:last-child {
+  border-bottom: none;
+}
+
+.question-box h2 {
+  margin-top: 20px;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+}
+
+.answer.show {
+  display: block;
+}
