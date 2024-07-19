@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nox Taggers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #logo-container {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <h1 style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Information:</h1>
+  </ul>
+    <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Modded APK Download:</p>
+    <div id="logo-container"></div>
+
+    <script>
+        const logoContainer = document.getElementById('logo-container');
+        const changeInterval = 50;
+        const logoTexts = [
+     "&#3494E6&lM&#4291E2&lo&#508EDD&ld&#5E8BD9&ld&#6D88D4&le&#7B85D0&ld &#9780C7&lB&#A57DC3&ly &#C277BA&lM&#D074B6&lr&#DE71B1&l.&#EC6EAD&lE"
+        ];
+        let currentIndex = 0;
+
+        function updateLogoText() {
+            const text = logoTexts[currentIndex];
+            logoContainer.innerHTML = '';
+            const regex = /&#([0-9A-F]{6})&l(.)/g;
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                const span = document.createElement('span');
+                span.style.color = `#${match[1]}`;
+                span.textContent = match[2];
+                logoContainer.appendChild(span);
+            }
+            currentIndex = (currentIndex + 1) % logoTexts.length;
+        }
+
+        setInterval(updateLogoText, changeInterval);
+        updateLogoText(); // Initial call to set the first text
+    </script>
+</body>
+</html>
