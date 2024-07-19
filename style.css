@@ -43,28 +43,20 @@ main {
   margin: auto;
 }
 
-/* Add the animation magic */
 body {
-  animation: rainbow-anim 5s infinite linear; /* adjust the animation duration and repeat count as needed */
+  -webkit-text-fill-color: transparent; /* safari and chrome support */
+  -webkit-background-clip: text; /* safari and chrome support */
 }
 
+/* Add the animation magic */
 @keyframes rainbow-anim {
   0% {
-    color: #ff0000; /* red */
+    background-image: linear-gradient(to right, #ff0000, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
   }
-  20% {
-    color: #ffa500; /* orange */
-  }
-  40% {
-    color: #ffff00; /* yellow */
-  }
-  60% {
-    color: #008000; /* green */
-  }
-  80% {
-    color: #0000ff; /* blue */
-  }
-  100% {
-    color: #4b0082; /* purple */
-  }
+  
 }
