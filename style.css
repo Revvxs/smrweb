@@ -58,7 +58,7 @@ main {
 }
 
 .rainbow-text:hover {
-  animation: rainbow-anim 5s infinite linear;
+  animation: rainbow-anim 5s infinite;
 }
 
 @keyframes rainbow-anim {
@@ -188,4 +188,7 @@ main {
 			-webkit-text-fill-color: transparent;
 			font-weight: bold;
 		}
+.animated-element {
+  animation: rainbow-anim 5s infinite;
+}
 }
