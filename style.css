@@ -81,3 +81,32 @@ main {
   max-width: 800px;
   margin: auto;
 }
+#qna {
+  max-width: 800px;
+  margin: auto;
+}
+
+.question-box {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.question-box h2 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.answer {
+  padding: 20px;
+}
+
+.answer.show {
+  display: block;
+}
