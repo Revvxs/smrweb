@@ -9,45 +9,33 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #fff; /* White text */
   background-color: #333; /* Black background */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, sans-serif;
-  color: #ccc; /* Dim gray text */
 }
 
 h1 {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #fff; /* White text */
 }
 
 h2 {
   font-size: 36px;
   font-weight: bold;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 18px;
+  color: #ccc; /* Dim gray text */
 }
 
 p {
   font-size: 16px;
+  color: #ccc; /* Dim gray text */
 }
 
 a {
   text-decoration: none;
-  color: #337ab7;
 }
 
 a:hover {
-  color: #23527c;
+  text-decoration: underline;
 }
 
 /* Header Styles */
@@ -82,15 +70,5 @@ nav a:hover {
 
 main {
   max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #333; /* Black background */
-}
-
-main h1, main h2, main h3, main h4, main h5, main h6 {
-  margin-top: 20px;
-}
-
-main p {
-  margin-bottom: 20px;
+  margin: auto;
 }
