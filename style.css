@@ -44,19 +44,18 @@ main {
 }
 
 body {
-  -webkit-text-fill-color: transparent; /* safari and chrome support */
-  -webkit-background-clip: text; /* safari and chrome support */
+  background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  -moz-background-clip: text; /* Firefox support */
+  -webkit-background-clip: text; /* Safari support */
+  background-clip: text; /* Standard syntax */
+  -moz-background-size: 100% 100%; /* Firefox support */
+  -webkit-background-size: 100% 100%; /* Safari support */
+  background-size: 100% 100%;
 }
 
 .rainbow-text {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  background-size: 100% 100%;
 }
 
 .rainbow-text:hover {
@@ -71,4 +70,3 @@ body {
     background-position: 100% 50%;
   }
 }
-
