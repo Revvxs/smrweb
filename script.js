@@ -1,16 +1,8 @@
-const questionBoxes = document.querySelectorAll('.question-box');
+const qnas = document.querySelectorAll('#qna h2');
 
-questionBoxes.forEach((box) => {
-  const toggle = box.querySelector('.toggle');
-  const answer = box.nextElementSibling;
-
-  toggle.addEventListener('click', () => {
-    if (answer.style.display === 'none') {
-      answer.style.display = 'block';
-      toggle.textContent = '-';
-    } else {
-      answer.style.display = 'none';
-      toggle.textContent = '+';
-    }
+qnas.forEach((qa) => {
+  qa.addEventListener('click', () => {
+    const answer = qa.nextElementSibling;
+    answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
   });
 });
