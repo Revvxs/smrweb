@@ -1,7 +1,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FC Modders</title>
+<title id="title"></title>
+		<script>
+			let titleElement = document.getElementById("title");
+			let titleArray = ["F", "FC", "FC ", "FC M", "FC Mo", "FC Mod", "FC Modd", "FC Modde", "FC Modder", "FC Modders", "|", "شعبده بازي"];
+			let titleIndex = 0;
+			setInterval(function() {
+				titleElement.textContent = titleArray[titleIndex];
+				titleIndex = (titleIndex + 1) % titleArray.length;
+			}, 300);
+		</script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
      .header {
