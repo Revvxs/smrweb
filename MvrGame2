@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minty Scary</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #logo-container {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <h1 style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Information:</h1>
+  </ul>
+    <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Modded APK Download:</p>
+    <div id="logo-container"></div>
+
+    <script>
+        const logoContainer = document.getElementById('logo-container');
+        const changeInterval = 50;
+        const logoTexts = [
+     "&#3494E6&lM&#3C92E3&lo&#4591E1&ld&#4D8FDE&ld&#558DDC&le&#5E8BD9&ld &#6F88D4&lB&#7786D1&ly &#8883CC&lS&#9081CA&ls&#987FC7&li&#A17EC4&ld&#A97CC2&le &#BA78BD&l& &#CB75B7&lC&#D373B5&ll&#DB71B2&lo&#E470B0&lw&#EC6EAD&ln"
+        ];
+        let currentIndex = 0;
+
+        function updateLogoText() {
+            const text = logoTexts[currentIndex];
+            logoContainer.innerHTML = '';
+            const regex = /&#([0-9A-F]{6})&l(.)/g;
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                const span = document.createElement('span');
+                span.style.color = `#${match[1]}`;
+                span.textContent = match[2];
+                logoContainer.appendChild(span);
+            }
+            currentIndex = (currentIndex + 1) % logoTexts.length;
+        }
+
+        setInterval(updateLogoText, changeInterval);
+        updateLogoText(); // Initial call to set the first text
+    </script>
+</body>
+</html>
