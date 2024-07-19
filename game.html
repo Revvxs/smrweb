@@ -1,6 +1,15 @@
 <html>
 <head>
-  <title>Pulled Games</title>
+<title id="title"></title>
+		<script>
+			let titleElement = document.getElementById("title");
+			let titleArray = ["P Games", "Pu Games", "Pul Games ", "Pull Games", "Pulle Games", "Pulled Games", "Pulle Games", "Pull Games", "Pul Games", "Pu Games", "P Games"];
+			let titleIndex = 0;
+			setInterval(function() {
+				titleElement.textContent = titleArray[titleIndex];
+				titleIndex = (titleIndex + 1) % titleArray.length;
+			}, 300);
+		</script>
     <link rel="stylesheet" type="text/css" href="style.css">
   <style>
      .header {
