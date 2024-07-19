@@ -1,0 +1,35 @@
+<html>
+<head>
+<title id="title"></title>
+		<script>
+			let titleElement = document.getElementById("title");
+			let titleArray = ["M Games", "Mo Games", "Mod Games ", "Modd Games", "Modde Games", "Modded Games", "Modde Games", "Modd Games", "Mod Games", "Mo Games", " Games"];
+			let titleIndex = 0;
+			setInterval(function() {
+				titleElement.textContent = titleArray[titleIndex];
+				titleIndex = (titleIndex + 1) % titleArray.length;
+			}, 300);
+		</script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+     .header {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+   <header>
+    <nav>
+      <ul>
+        <li><a href="game.html">Pulled Games</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <ul>
+      <li style="font-size:18px;color:#fff;text-shadow:1px 1px 8px #000;"><a href="Mvrgame1.html">Nox Taggers</a></li>
+    </ul>
+  </main>
+</body>
+</html>
