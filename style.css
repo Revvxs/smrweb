@@ -1,43 +1,28 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2em;
+  flex-grow: 1;
 }
 
-h1 {
-  font-size: 2em;
+section {
+  display: none;
 }
 
-p {
-  font-size: 1.2em;
+.active {
+  display: block;
+}
+
+nav a {
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:active {
+  background-color: #ccc;
 }
