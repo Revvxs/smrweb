@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Skyz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #logo-container {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <h1 style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Information</h1>
+  <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Discord: https://discord.gg/MUXDtwqNYa
+  <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Link: https://vampire12.itch.io/project-skyz
+  <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Info:</p>
+  <ul>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Title ID: AE9C7</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Voice: 3221ce59-ac36-461c-a109-a9e0f02a535d</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Realtime: 7d45a273-a7d3-441a-8173-d9a650cb0ef7</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Dev Key: NA</li>
+    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Assembly-Csharp Download: NA</li>
+  </ul>
+ <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game RPCS:</p>
+ <ul style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">
+    <li>ClickRpc</li>
+    <li>DestroyRpc</li>
+    <li>CantHearYouHeresWhy</li>
+    <li>ChangePlayerMaterial</li>
+    <li>EnableCosmetic</li>
+    <li>DisableCosmeticExplode</li>
+    <li>InitializeNoobMaterial</li>
+    <li>JoinPubWithFriends</li>
+    <li>LaunchSlingshotProjectile</li>
+    <li>PlayDrum</li>
+    <li>PlayHandTap</li>
+    <li>PlaySelfOnlyInstrument</li>
+    <li>PlaySurfaceHit</li>
+    <li>PlayTagSound</li>
+    <li>ReportSlingshotHit</li>
+    <li>ReportTagRPC</li>
+    <li>RequestCosmetics</li>
+    <li>RequestMaterialColor</li>
+    <li>RPCWorldShareable</li>
+    <li>SetJoinTaggedTime</li>
+    <li>SetSlowedTime</li>
+    <li>SetTaggedTime</li>
+    <li>SpawnSlingshotPlayerImpactEffect</li>
+    <li>UpdateCosmetics</li>
+    <li>UpdateCosmeticsWithTryon</li>
+    <li>UpdatePlayerCosmetic</li>
+</ul>
+    <div id="logo-container"></div>
+
+    <script>
+        const logoContainer = document.getElementById('logo-container');
+        const changeInterval = 50;
+       const logoTexts = [
+    "&#E170B0&lP&#D672B4&lu&#CC75B7&ll&#C177BA&ll&#B679BE&le&#AB7BC1&ld &#A07EC4&lB&#9580C8&ly &#8B82CB&lg&#8084CF&la&#7587D2&ll&#6A89D5&la&#5F8BD9&lx&#548DDC&li&#4A90DF&lz&#3F92E3&ls",
+    "&#EC6EAD&lP&#E170B0&lu&#D672B4&ll&#CC75B7&ll&#C177BA&le&#B679BE&ld &#AB7BC1&lB&#A07EC4&ly &#9580C8&lg&#8B82CB&la&#8084CF&ll&#7587D2&la&#6A89D5&lx&#5F8BD9&li&#548DDC&lz&#4A90DF&ls",
+    "&#E170B0&lP&#EC6EAD&lu&#E170B0&ll&#D672B4&ll&#CC75B7&le&#C177BA&ld &#B679BE&lB&#AB7BC1&ly &#A07EC4&lg&#9580C8&la&#8B82CB&ll&#8084CF&la&#7587D2&lx&#6A89D5&li&#5F8BD9&lz&#548DDC&ls",
+    "&#D672B4&lP&#E170B0&lu&#EC6EAD&ll&#E170B0&ll&#D672B4&le&#CC75B7&ld &#C177BA&lB&#B679BE&ly &#AB7BC1&lg&#A07EC4&la&#9580C8&ll&#8B82CB&la&#8084CF&lx&#7587D2&li&#6A89D5&lz&#5F8BD9&ls",
+    "&#CC75B7&lP&#D672B4&lu&#E170B0&ll&#EC6EAD&ll&#E170B0&le&#D672B4&ld &#CC75B7&lB&#C177BA&ly &#B679BE&lg&#AB7BC1&la&#A07EC4&ll&#9580C8&la&#8B82CB&lx&#8084CF&li&#7587D2&lz&#6A89D5&ls",
+    "&#C177BA&lP&#CC75B7&lu&#D672B4&ll&#E170B0&ll&#EC6EAD&le&#E170B0&ld &#D672B4&lB&#CC75B7&ly &#C177BA&lg&#B679BE&la&#AB7BC1&ll&#A07EC4&la&#9580C8&lx&#8B82CB&li&#8084CF&lz&#7587D2&ls",
+    "&#B679BE&lP&#C177BA&lu&#CC75B7&ll&#D672B4&ll&#E170B0&le&#EC6EAD&ld &#E170B0&lB&#D672B4&ly &#CC75B7&lg&#C177BA&la&#B679BE&ll&#AB7BC1&la&#A07EC4&lx&#9580C8&li&#8B82CB&lz&#8084CF&ls",
+    "&#AB7BC1&lP&#B679BE&lu&#C177BA&ll&#CC75B7&ll&#D672B4&le&#E170B0&ld &#EC6EAD&lB&#E170B0&ly &#D672B4&lg&#CC75B7&la&#C177BA&ll&#B679BE&la&#AB7BC1&lx&#A07EC4&li&#9580C8&lz&#8B82CB&ls",
+    "&#A07EC4&lP&#AB7BC1&lu&#B679BE&ll&#C177BA&ll&#CC75B7&le&#D672B4&ld &#E170B0&lB&#EC6EAD&ly &#E170B0&lg&#D672B4&la&#CC75B7&ll&#C177BA&la&#B679BE&lx&#AB7BC1&li&#A07EC4&lz&#9580C8&ls",
+    "&#9580C8&lP&#A07EC4&lu&#AB7BC1&ll&#B679BE&ll&#C177BA&le&#CC75B7&ld &#D672B4&lB&#E170B0&ly &#EC6EAD&lg&#E170B0&la&#D672B4&ll&#CC75B7&la&#C177BA&lx&#B679BE&li&#AB7BC1&lz&#A07EC4&ls",
+    "&#8B82CB&lP&#9580C8&lu&#A07EC4&ll&#AB7BC1&ll&#B679BE&le&#C177BA&ld &#CC75B7&lB&#D672B4&ly &#E170B0&lg&#EC6EAD&la&#E170B0&ll&#D672B4&la&#CC75B7&lx&#C177BA&li&#B679BE&lz&#AB7BC1&ls",
+    "&#8084CF&lP&#8B82CB&lu&#9580C8&ll&#A07EC4&ll&#AB7BC1&le&#B679BE&ld &#C177BA&lB&#CC75B7&ly &#D672B4&lg&#E170B0&la&#EC6EAD&ll&#E170B0&la&#D672B4&lx&#CC75B7&li&#C177BA&lz&#B679BE&ls",
+    "&#7587D2&lP&#8084CF&lu&#8B82CB&ll&#9580C8&ll&#A07EC4&le&#AB7BC1&ld &#B679BE&lB&#C177BA&ly &#CC75B7&lg&#D672B4&la&#E170B0&ll&#EC6EAD&la&#E170B0&lx&#D672B4&li&#CC75B7&lz&#C177BA&ls",
+    "&#6A89D5&lP&#7587D2&lu&#8084CF&ll&#8B82CB&ll&#9580C8&le&#A07EC4&ld &#AB7BC1&lB&#B679BE&ly &#C177BA&lg&#CC75B7&la&#D672B4&ll&#E170B0&la&#EC6EAD&lx&#E170B0&li&#D672B4&lz&#CC75B7&ls",
+    "&#5F8BD9&lP&#6A89D5&lu&#7587D2&ll&#8084CF&ll&#8B82CB&le&#9580C8&ld &#A07EC4&lB&#AB7BC1&ly &#B679BE&lg&#C177BA&la&#CC75B7&ll&#D672B4&la&#E170B0&lx&#EC6EAD&li&#E170B0&lz&#D672B4&ls",
+    "&#548DDC&lP&#5F8BD9&lu&#6A89D5&ll&#7587D2&ll&#8084CF&le&#8B82CB&ld &#9580C8&lB&#A07EC4&ly &#AB7BC1&lg&#B679BE&la&#C177BA&ll&#CC75B7&la&#D672B4&lx&#E170B0&li&#EC6EAD&lz&#E170B0&ls",
+    "&#4A90DF&lP&#548DDC&lu&#5F8BD9&ll&#6A89D5&ll&#7587D2&le&#8084CF&ld &#8B82CB&lB&#9580C8&ly &#A07EC4&lg&#AB7BC1&la&#B679BE&ll&#C177BA&la&#CC75B7&lx&#D672B4&li&#E170B0&lz&#EC6EAD&ls",
+    "&#3F92E3&lP&#4A90DF&lu&#548DDC&ll&#5F8BD9&ll&#6A89D5&le&#7587D2&ld &#8084CF&lB&#8B82CB&ly &#9580C8&lg&#A07EC4&la&#AB7BC1&ll&#B679BE&la&#C177BA&lx&#CC75B7&li&#D672B4&lz&#E170B0&ls",
+    "&#3494E6&lP&#3F92E3&lu&#4A90DF&ll&#548DDC&ll&#5F8BD9&le&#6A89D5&ld &#7587D2&lB&#8084CF&ly &#8B82CB&lg&#9580C8&la&#A07EC4&ll&#AB7BC1&la&#B679BE&lx&#C177BA&li&#CC75B7&lz&#D672B4&ls",
+    "&#2A97E9&lP&#3494E6&lu&#3F92E3&ll&#4A90DF&ll&#548DDC&le&#5F8BD9&ld &#6A89D5&lB&#7587D2&ly &#8084CF&lg&#8B82CB&la&#9580C8&ll&#A07EC4&la&#AB7BC1&lx&#B679BE&li&#C177BA&lz&#CC75B7&ls"
+];
+        let currentIndex = 0;
+
+        function updateLogoText() {
+            const text = logoTexts[currentIndex];
+            logoContainer.innerHTML = '';
+            const regex = /&#([0-9A-F]{6})&l(.)/g;
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                const span = document.createElement('span');
+                span.style.color = `#${match[1]}`;
+                span.textContent = match[2];
+                logoContainer.appendChild(span);
+            }
+            currentIndex = (currentIndex + 1) % logoTexts.length;
+        }
+
+        setInterval(updateLogoText, changeInterval);
+        updateLogoText(); // Initial call to set the first text
+    </script>
+</body>
+</html>
