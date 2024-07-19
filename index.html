@@ -2,38 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FC Modders</title>
-  <script>
-    let titleArray = [
-      "F",
-      "FC",
-      "FC M",
-      "FC Mo",
-      "FC Mod",
-      "FC Modd",
-      "FC Modde",
-      "FC Modder",
-      "FC Modders",
-      "FC Modders",
-      "FC Modder",
-      "FC Modde",
-      "FC Modd",
-      "FC Mod",
-      "FC Mo",
-      "FC M",
-      "FC",
-      "F"
-    ];
-    let titleIndex = 0;
-
-    function updateTitleText() {
-      document.title = titleArray[titleIndex];
-      titleIndex = (titleIndex + 1) % titleArray.length;
-    }
-
-    setInterval(updateTitleText, 300);
-    updateTitleText(); // Initial call to set the first text
-  </script>
+  <title id="logo-container"></title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
     .header {
@@ -66,5 +35,46 @@
       <div id="logo-container"></div>
     </section>
   </main>
+  <script>
+    const logoContainer = document.getElementById('logo-container');
+    const logoTexts = [
+      "&#FF0000&lF&#FF7F00&lC &#FFBF00&lM&#FFFF00&lo&#80FF00&ld&#00FF00&ld&#0000FF&le&#4B0082&lr&#7000AB&ls",
+      "&#FF7F00&lF&#FF0000&lC &#FF7F00&lM&#FFBF00&lo&#FFFF00&ld&#80FF00&ld&#00FF00&le&#0000FF&lr&#4B0082&ls",
+      "&#FFBF00&lF&#FF7F00&lC &#FF0000&lM&#FF7F00&lo&#FFBF00&ld&#FFFF00&ld&#80FF00&le&#00FF00&lr&#0000FF&ls",
+      "&#FFFF00&lF&#FFBF00&lC &#FF7F00&lM&#FF0000&lo&#FF7F00&ld&#FFBF00&ld&#FFFF00&le&#80FF00&lr&#00FF00&ls",
+      "&#80FF00&lF&#FFFF00&lC &#FFBF00&lM&#FF7F00&lo&#FF0000&ld&#FF7F00&ld&#FFBF00&le&#FFFF00&lr&#80FF00&ls",
+      "&#00FF00&lF&#80FF00&lC &#FFFF00&lM&#FFBF00&lo&#FF7F00&ld&#FF0000&ld&#FF7F00&le&#FFBF00&lr&#FFFF00&ls",
+      "&#0000FF&lF&#00FF00&lC &#80FF00&lM&#FFFF00&lo&#FFBF00&ld&#FF7F00&ld&#FF0000&le&#FF7F00&lr&#FFBF00&ls",
+      "&#4B0082&lF&#0000FF&lC &#00FF00&lM&#80FF00&lo&#FFFF00&ld&#FFBF00&ld&#FF7F00&le&#FF0000&lr&#FF7F00&ls",
+      "&#7000AB&lF&#4B0082&lC &#0000FF&lM&#00FF00&lo&#80FF00&ld&#FFFF00&ld&#FFBF00&le&#FF7F00&lr&#FF0000&ls",
+      "&#9400D3&lF&#7000AB&lC &#4B0082&lM&#0000FF&lo&#00FF00&ld&#80FF00&ld&#FFFF00&le&#FFBF00&lr&#FF7F00&ls",
+      "&#7000AB&lF&#9400D3&lC &#7000AB&lM&#4B0082&lo&#0000FF&ld&#00FF00&ld&#80FF00&le&#FFFF00&lr&#FFBF00&ls",
+      "&#4B0082&lF&#7000AB&lC &#9400D3&lM&#7000AB&lo&#4B0082&ld&#0000FF&ld&#00FF00&le&#80FF00&lr&#FFFF00&ls",
+      "&#0000FF&lF&#4B0082&lC &#7000AB&lM&#9400D3&lo&#7000AB&ld&#4B0082&ld&#0000FF&le&#00FF00&lr&#80FF00&ls",
+      "&#00FF00&lF&#0000FF&lC &#4B0082&lM&#7000AB&lo&#9400D3&ld&#7000AB&ld&#4B0082&le&#0000FF&lr&#00FF00&ls",
+      "&#80FF00&lF&#00FF00&lC &#0000FF&lM&#4B0082&lo&#7000AB&ld&#9400D3&ld&#7000AB&le&#4B0082&lr&#0000FF&ls",
+      "&#FFFF00&lF&#80FF00&lC &#00FF00&lM&#0000FF&lo&#4B0082&ld&#7000AB&ld&#9400D3&le&#7000AB&lr&#4B0082&ls",
+      "&#FFBF00&lF&#FFFF00&lC &#80FF00&lM&#00FF00&lo&#0000FF&ld&#4B0082&ld&#7000AB&le&#9400D3&lr&#7000AB&ls",
+      "&#FF7F00&lF&#FFBF00&lC &#FFFF00&lM&#80FF00&lo&#00FF00&ld&#0000FF&ld&#4B0082&le&#7000AB&lr&#9400D3&ls"
+    ];
+    let currentIndex = 0;
+
+    function updateLogoText() {
+      const text = logoTexts[currentIndex];
+      logoContainer.innerHTML = '';
+      const regex = /&#([0-9A-F]{6})&l(.)/g;
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        const span = document.createElement('span');
+        span.style.color = `#${match[1]}`;
+        span.textContent = match[2];
+        logoContainer.appendChild(span);
+      }
+      currentIndex = (currentIndex + 1) % logoTexts.length;
+    }
+
+    setInterval(updateLogoText, 50);
+    updateLogoText(); // Initial call to set the first text
+  </script>
 </body>
 </html>
