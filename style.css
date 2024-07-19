@@ -81,3 +81,21 @@ main {
   max-width: 800px;
   margin: auto;
 }
+
+#qna {
+  max-width: 800px;
+  margin: auto;
+}
+
+#qna h2 {
+  cursor: pointer;
+}
+
+#qna div {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#qna div:last-child {
+  border-bottom: none;
+}
