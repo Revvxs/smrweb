@@ -1,42 +1,31 @@
-/* Global Styles */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
+  background-color: #000; /* Black background */
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #333; /* Black background */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, sans-serif;
 }
 
 h1 {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #666; /* Dim gray header */
 }
 
 h2 {
   font-size: 36px;
   font-weight: bold;
+  color: #666; /* Dim gray header */
 }
 
 h3 {
   font-size: 24px;
-}
-
-h4 {
-  font-size: 18px;
+  font-weight: bold;
+  color: #666; /* Dim gray header */
 }
 
 p {
   font-size: 16px;
+  color: #ccc; /* Dim gray text */
 }
 
 a {
@@ -47,11 +36,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header Styles */
-
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Header background */
+  color: #fff; /* Header text */
   padding: 20px;
   text-align: center;
 }
@@ -68,45 +55,14 @@ nav li {
 }
 
 nav a {
-  color: #fff;
+  color: #fff; /* Nav text */
 }
 
 nav a:hover {
-  color: #ccc;
+  color: #ccc; /* Nav hover text */
 }
-
-/* Main Content Styles */
 
 main {
   max-width: 800px;
   margin: auto;
-}
-#qna {
-  max-width: 800px;
-  margin: auto;
-}
-
-.question-box {
-  background-color: #f7f7f7;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-
-.question-box h2 {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.toggle {
-  cursor: pointer;
-}
-
-.answer {
-  padding: 20px;
-}
-
-.answer.show {
-  display: block;
 }
