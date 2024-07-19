@@ -1,15 +1,13 @@
-/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #000; /* Black background */
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #333; /* Black background */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,8 +45,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header Styles */
-
 header {
   background-color: #333;
   color: #fff;
@@ -75,27 +71,7 @@ nav a:hover {
   color: #ccc;
 }
 
-/* Main Content Styles */
-
 main {
-  max-width: 800px;
-  margin: auto;
-}
-
-#qna {
-  max-width: 800px;
-  margin: auto;
-}
-
-#qna h2 {
-  cursor: pointer;
-}
-
-#qna div {
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-}
-
-#qna div:last-child {
-  border-bottom: none;
-}
+  max-width: calc(100% - calc(20px * 2));
+margin-left: calc(10px + (100% - calc(100vw - (100% - calc(20px * 2)))));
+margin-right: calc(10px + (100% - calc(100vw - (100% - calc(20px *
