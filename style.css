@@ -30,7 +30,8 @@ header {
     rgba(255, 255, 0, 0.5) 80%, 
     rgba(0, 128, 0, 0.5) 90%, 
     rgba(0, 0, 255, 0.5) 100%);
-  background-size: calc(100% + calc(2 * var(--animation-value))), auto;
+    background-size: calc(100% + calc(2 * var(--animation-value))), auto;
+    animation: animate var(--speed) linear infinite;
 }
 
 header::before {
@@ -43,10 +44,12 @@ header::before {
 }
 
 @keyframes animate {
-    to {
-        --animation-value: calc(var(--animation-value) + calc(100% / var(--speed)));
-        transform: translateX(-100%);
-    }
+  0% {
+    --animation-value: 0;
+  }
+  100% {
+    --animation-value: calc(100%);
+  }
 }
 
 header {
