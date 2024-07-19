@@ -56,9 +56,23 @@ header::before {
 }
 
 h1 {
-    background-clip: text; /* This will clip the background to the text */
-    -webkit-background-clip: text; /* For Safari */
-    color: transparent; /* Make the text color transparent */
+    text-shadow:
+        -10px -10px rgb(255,0,0),
+        -5px -5px rgb(255,165,0),
+        -5px -10px rgb(255,255,0),
+        -10px -5px rgb(0,128,0),
+        -5px -5px rgb(0,0,255),
+        -10px -5px rgb(128,0,128),
+        -5px -10px rgb(255,0,255);
+}
+
+header:hover h1 {
+    animation: animate-hue var(--speed) linear infinite;
+}
+
+@keyframes animate-hue {
+    from {color: rgb(255,0,0)}
+    to {color: rgb(255,165,0)}
 }
 
 header {
@@ -69,24 +83,6 @@ header span {
     animation: animate var(--speed) linear infinite;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav a {
-    color: #9000B1; /* Nav text */
-}
-
-nav a:hover {
-    color: #ccc; /* Nav hover text */
-}
 
 main {
     max-width: 800px;
