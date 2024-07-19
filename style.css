@@ -17,48 +17,66 @@ a:hover {
 header {
   padding: 20px;
   text-align: center;
+  color: transparent;
+  background-image: linear-gradient(to right, 
+    rgba(255, 0, 0, 0.5) 0%, 
+    rgba(255, 165, 0, 0.5) 10%, 
+    rgba(255, 255, 0, 0.5) 20%, 
+    rgba(0, 128, 0, 0.5) 30%, 
+    rgba(0, 0, 255, 0.5) 40%, 
+    rgba(128, 0, 128, 0.5) 50%, 
+    rgba(255, 0, 255, 0.5) 60%, 
+    rgba(255, 165, 0, 0.5) 70%, 
+    rgba(255, 255, 0, 0.5) 80%, 
+    rgba(0, 128, 0, 0.5) 90%, 
+    rgba(0, 0, 255, 0.5) 100%);
+  background-size: calc(100% + calc(2 * var(--animation-value))), auto;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: calc(200% + var(--animation-value));
+    height: calc(var(--animation-value));
+}
+
+@keyframes animate {
+    to {
+        --animation-value: calc(var(--animation-value) + calc(100% / var(--speed)));
+        transform: translateX(-100%);
+    }
+}
+
+header {
+    animation: animate var(--speed) linear infinite;
+}
+
+header span {
+    animation: animate var(--speed) linear infinite;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-  display: inline-block;
-  margin-right: 20px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav a {
-  color: #9000B1; /* Nav text */
+    color: #9000B1; /* Nav text */
 }
 
 nav a:hover {
-  color: #ccc; /* Nav hover text */
+    color: #ccc; /* Nav hover text */
 }
 
 main {
-  max-width: 800px;
-  margin: auto;
-}
-
-nav ul li {
-  transition: color 2s ease-in-out; /* Add this line to enable animation */
-}
-
-nav ul li:hover > a {
-  color: #f00; /* red */
-}
-
-nav ul li:hover > a:hover {
-  color: #ff0; /* yellow */
-}
-
-nav ul li:hover > a:hover:hover {
-  color: #0f0; /* green */
-}
-
-nav ul li:hover > a:hover:hover:hover {
-  color: #00f; /* blue */
+    max-width: 800px;
+    margin: auto;
 }
