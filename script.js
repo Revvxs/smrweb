@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = e.target.getAttribute('href');
-      const paragraphs = document.querySelectorAll('section p');
+      const paragraphs = document.querySelectorAll('main section p');
       paragraphs.forEach((paragraph) => {
-        paragraph.classList.remove('active');
+        paragraph.textContent = '';
       });
-      document.querySelector(targetId + ' p').classList.add('active');
+      document.querySelector(targetId.replace('#', ' section p')).textContent = `You are now on the ${targetId.replace('#', '')} page.`;
     });
   });
 });
