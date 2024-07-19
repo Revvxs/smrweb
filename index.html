@@ -34,3 +34,21 @@
       <p>We Mod Vr Games n' Shit.</p>
     </section>
   </main>
+ <script type="text/javascript">
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').substring(1);
+        sections.forEach((section) => {
+          section.classList.remove('active');
+        });
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
