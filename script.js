@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = e.target.getAttribute('href');
+      const sections = document.querySelectorAll('section');
       sections.forEach((section) => {
         if (section.id !== targetId) {
           section.classList.remove('active');
@@ -14,4 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+  const homeSection = document.getElementById('home');
+  homeSection.classList.add('active');
 });
