@@ -47,23 +47,21 @@ nav a:hover {
 }
 
 section {
-  display: none; 
 }
 
 .active {
   display: block; 
-  font-weight: bold;
 }
 
-
-#home {
+/* Target specific sections */
+.home {
   background-color: #f7fcf5; 
 }
 
-#games {
+.games {
   background-color: #ff69b4;
 }
 
-#about-us {
+.about-us {
   background-color: #ff99cc; 
 }
