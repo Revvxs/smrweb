@@ -15,76 +15,32 @@ a:hover {
 }
 
 header {
+  color: #9000B1; /* Header text */
   padding: 20px;
   text-align: center;
-  font-size: 24px;
-  font-family: Arial, sans-serif;
-  color: transparent;
-  background-image: 
-    linear-gradient(to right, 
-      rgba(255, 0, 0, 1) 0%, 
-      rgba(255, 165, 0, 1) 10%, 
-      rgba(255, 255, 0, 1) 20%, 
-      rgba(0, 128, 0, 1) 30%, 
-      rgba(0, 0, 255, 1) 40%, 
-      rgba(128, 0, 128, 1) 50%, 
-      rgba(255, 0, 255, 1) 60%, 
-      rgba(255, 165, 0, 1) 70%, 
-      rgba(255, 255, 0, 1) 80%, 
-      rgba(0, 128, 0, 1) 90%, 
-      rgba(0, 0, 255, 1) calc(100% - var(--animation-value));
-    background-size: calc(100% + calc(2 * var(--animation-value))), auto;
-    animation: animate var(--speed) linear infinite;
 }
 
-header::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: calc(200% + var(--animation-value));
-    height: calc(var(--animation-value));
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes animate {
-    0% {
-        --animation-value: 0;
-    }
-    100% {
-        --animation-value: calc(100%);
-    }
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-h1 {
-    text-shadow:
-        -10px -10px rgb(255,0,0),
-        -5px -5px rgb(255,165,0),
-        -5px -10px rgb(255,255,0),
-        -10px -5px rgb(0,128,0),
-        -5px -5px rgb(0,0,255),
-        -10px -5px rgb(128,0,128),
-        -5px -10px rgb(255,0,255);
+nav a {
+  color: #9000B1; /* Nav text */
 }
 
-header:hover h1 {
-    animation: animate-hue var(--speed) linear infinite;
+nav a:hover {
+  color: #ccc; /* Nav hover text */
 }
-
-@keyframes animate-hue {
-    from {color: rgb(255,0,0)}
-    to {color: rgb(255,165,0)}
-}
-
-header {
-    animation: animate var(--speed) linear infinite;
-}
-
-header span {
-    animation: animate var(--speed) linear infinite;
-}
-
 
 main {
-    max-width: 800px;
-    margin: auto;
+  max-width: 800px;
+  margin: auto;
 }
