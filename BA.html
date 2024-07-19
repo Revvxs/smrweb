@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ban All</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #logo-container {
-            font-size: 24px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
 <form action="/ban_players" method="post">
+  <h2>Ban All</h2>
   <label for="playfab_id">PlayFab ID:</label>
   <input type="text" id="playfab_id" name="playfab_id"><br><br>
   <label for="secret_key">Secret Key:</label>
@@ -24,32 +19,33 @@
   <input type="number" id="duration_hours" name="duration_hours"><br><br>
   <input type="submit" value="Ban Players">
 </form>
-    <div id="logo-container"></div>
 
-    <script>
-        const logoContainer = document.getElementById('logo-container');
-        const changeInterval = 50;
-        const logoTexts = [
-            "&#CB2D3E&lB&#D1313D&la&#D7363D&ln &#E33E3B&lA&#E9433B&ll&#EF473A&ll"
-        ];
-        let currentIndex = 0;
+<div id="logo-container"></div>
 
-        function updateLogoText() {
-            const text = logoTexts[currentIndex];
-            logoContainer.innerHTML = '';
-            const regex = /&#([0-9A-F]{6})&l(.)/g;
-            let match;
-            while ((match = regex.exec(text)) !== null) {
-                const span = document.createElement('span');
-                span.style.color = `#${match[1]}`;
-                span.textContent = match[2];
-                logoContainer.appendChild(span);
-            }
-            currentIndex = (currentIndex + 1) % logoTexts.length;
+<script>
+    const logoContainer = document.getElementById('logo-container');
+    const changeInterval = 50;
+    const logoTexts = [
+        "&#CB2D3E&lB&#D1313D&la&#D7363D&ln &#E33E3B&lA&#E9433B&ll&#EF473A&ll"
+    ];
+    let currentIndex = 0;
+
+    function updateLogoText() {
+        const text = logoTexts[currentIndex];
+        logoContainer.innerHTML = '';
+        const regex = /&#([0-9A-F]{6})&l(.)/g;
+        let match;
+        while ((match = regex.exec(text)) !== null) {
+            const span = document.createElement('span');
+            span.style.color = `#${match[1]}`;
+            span.textContent = match[2];
+            logoContainer.appendChild(span);
         }
+        currentIndex = (currentIndex + 1) % logoTexts.length;
+    }
 
-        setInterval(updateLogoText, changeInterval);
-        updateLogoText(); // Initial call to set the first text
-    </script>
+    setInterval(updateLogoText, changeInterval);
+    updateLogoText(); // Initial call to set the first text
+</script>
 </body>
 </html>
