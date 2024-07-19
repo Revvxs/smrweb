@@ -190,6 +190,7 @@ main {
 		}
 .animated-element {
   animation: rainbow-anim 5s infinite;
+  background-clip: border-box; /* or padding-box, content-box */
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
