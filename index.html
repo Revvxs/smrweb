@@ -2,7 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title id="logo-container"></title>
+  <title id="title">FC Modders</title>
+  <script>
+    let titleArray = [
+      "F",
+      "FC",
+      "FC M",
+      "FC Mo",
+      "FC Mod",
+      "FC Modd",
+      "FC Modde",
+      "FC Modder",
+      "FC Modders",
+      "FC Modders",
+      "FC Modder",
+      "FC Modde",
+      "FC Modd",
+      "FC Mod",
+      "FC Mo",
+      "FC M",
+      "FC",
+      "F"
+    ];
+    let titleIndex = 0;
+
+    function updateTitleText() {
+      document.title = titleArray[titleIndex];
+      titleIndex = (titleIndex + 1) % titleArray.length;
+    }
+
+    setInterval(updateTitleText, 300);
+    updateTitleText(); // Initial call to set the first text
+  </script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
     .header {
