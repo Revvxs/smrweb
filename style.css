@@ -48,15 +48,27 @@ body {
   -webkit-background-clip: text; /* safari and chrome support */
 }
 
-/* Add the animation magic */
+.rainbow-text {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.rainbow-text:hover {
+  animation: rainbow-anim 5s infinite linear;
+}
+
 @keyframes rainbow-anim {
   0% {
-    background-image: linear-gradient(to right, #ff0000, #ff0000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-timing-function: linear;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    background-position: 0% 50%;
   }
-  
+  100% {
+    background-position: 100% 50%;
+  }
 }
+
