@@ -35,5 +35,19 @@
   <p style="font-size:18px;color:#fff;text-shadow:1px 1px 8px #000;">I know I suck at coding</p>
 </section>
   </main>
+<img id="site-logo" src="" alt="Site Logo">
+  <script>
+    fetch('logo.yaml')
+      .then(response => response.text())
+      .then(yamlText => {
+        const config = jsyaml.load(yamlText);
+        const logo = document.getElementById('site-logo');
+
+        // Example of using the first text from the YAML config
+        logo.alt = config.texts[0];
+        // You can customize the logo display as per your requirements
+      })
+      .catch(e => console.error('Failed to load or parse logo.yaml', e));
+  </script>
 </body>
 </html>
