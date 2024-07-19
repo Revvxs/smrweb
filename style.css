@@ -6,13 +6,6 @@ body {
   background-position: center;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  background-image: url('icon.jpg');
-  background-size: contain;
-}
-
 a {
   text-decoration: none;
 }
@@ -22,7 +15,6 @@ a:hover {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.5); 
   color: #9000B1; /* Header text */
   padding: 20px;
   text-align: center;
