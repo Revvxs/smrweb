@@ -26,25 +26,6 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
-  transition: color 2s ease-in-out;
-}
-
-nav ul li:hover > a {
-  color: #f00; /* red */
-}
-
-nav ul li:hover > a:hover {
-  color: #ff0; /* yellow */
-}
-
-nav ul li:hover > a:hover:hover {
-  color: #0f0; /* green */
-}
-
-nav ul li:hover > a:hover:hover:hover {
-  color: #00f; /* blue */
-}
 nav li {
   display: inline-block;
   margin-right: 20px;
@@ -61,4 +42,24 @@ nav a:hover {
 main {
   max-width: 800px;
   margin: auto;
+}
+
+nav ul li {
+  transition: color 2s ease-in-out; /* Add this line to enable animation */
+}
+
+nav ul li:hover > a {
+  color: #f00; /* red */
+}
+
+nav ul li:hover > a:hover {
+  color: #ff0; /* yellow */
+}
+
+nav ul li:hover > a:hover:hover {
+  color: #0f0; /* green */
+}
+
+nav ul li:hover > a:hover:hover:hover {
+  color: #00f; /* blue */
 }
