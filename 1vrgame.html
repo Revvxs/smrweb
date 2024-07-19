@@ -1,59 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    .colored-text {
-        font-family: Arial, sans-serif;
-        font-size: 24px;
-    }
-    .colored-text span {
-        display: inline-block;
-        padding: 0 2px;
-        color: white;
-    }
-    .colored-text .c1 { background-color: #00FFE0; }
-    .colored-text .c2 { background-color: #12EBE2; }
-    .colored-text .c3 { background-color: #24D8E5; }
-    .colored-text .c4 { background-color: #36C4E7; }
-    .colored-text .c5 { background-color: #48B1EA; }
-    .colored-text .c6 { background-color: #5A9DEC; }
-    .colored-text .c7 { background-color: #7F76F1; }
-    .colored-text .c8 { background-color: #9162F3; }
-    .colored-text .c9 { background-color: #B53BF8; }
-    .colored-text .c10 { background-color: #C727FA; }
-    .colored-text .c11 { background-color: #D914FD; }
-    .colored-text .c12 { background-color: #EB00FF; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #logo-container {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <h1 style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Information:</h1>
-  <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Discord Link: </p>
-  <p style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Game Info:</p>
-  <ul>
-    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Title ID: NA</li>
-    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Voice: NA</li>
-    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Photon Shit: NA</li>
-    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Dev Key: NA</li>
-    <li style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Assembly-Csharp Download: NA</li>
-  </ul>
+    <h1 class="header">Game Information:</h1>
+    <p class="info">Discord Link: </p>
+    <p class="info">Game Info:</p>
+    <ul class="game-info-list">
+        <li>Title ID: NA</li>
+        <li>Photon Voice: NA</li>
+        <li>Photon Shit: NA</li>
+        <li>Dev Key: NA</li>
+        <li>Assembly-Csharp Download: NA</li>
+    </ul>
+    <div id="logo-container"></div>
 
-  <div class="colored-text">
-    <span class="c1">l</span>
-    <span class="c2">P</span>
-    <span class="c3">u</span>
-    <span class="c4">ll</span>
-    <span class="c5">e</span>
-    <span class="c6">d </span>
-    <span class="c7">B</span>
-    <span class="c8">l</span>
-    <span class="c9">y </span>
-    <span class="c10">M</span>
-    <span class="c11">r</span>
-    <span class="c12">E</span>
-  </div>
+    <script>
+        const logoContainer = document.getElementById('logo-container');
+        const logoTexts = [
+            "&#00FFE0&lP&#12EBE2&lu&#24D8E5&ll&#36C4E7&ll&#48B1EA&le&#5A9DEC&ld &#7F76F1&lB&#9162F3&ly &#B53BF8&lM&#C727FA&lr&#D914FD&l.&#EB00FF&lE"
+        ];
+        let currentIndex = 0;
+
+        function updateLogoText() {
+            const text = logoTexts[currentIndex];
+            logoContainer.innerHTML = '';
+            const regex = /&#([0-9A-F]{6})&l(.)/g;
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                const span = document.createElement('span');
+                span.style.color = `#${match[1]}`;
+                span.textContent = match[2];
+                logoContainer.appendChild(span);
+            }
+            currentIndex = (currentIndex + 1) % logoTexts.length;
+        }
+
+        setInterval(updateLogoText, 50);
+        updateLogoText(); // Initial call to set the first text
+    </script>
 </body>
 </html>
