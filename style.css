@@ -1,7 +1,9 @@
 body {
-  background-color: #000; /* Black background */
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-image: url("Untitled design(1).jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 a {
