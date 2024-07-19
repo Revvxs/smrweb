@@ -97,20 +97,6 @@ ul:hover li:hover ~ li:before {
 	translate: -100% 0;
 	transition: .2s .2s,scale 0s .4s;
 }
-
-.rainbow-text {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-image: 
-    linear-gradient(to right, 
-      rgba(255, 0, 0, .5), 
-      rgba(255, 127, 0, .5), 
-      rgba(255, 255, 0, .5), 
-      rgba(0, 255, 0, .5), 
-      rgba(0, 255, 255, .5), 
-      rgba(0, 0, 255, .5), 
-      rgba(255, 0, 255, .5));
-}
 .brand h1 {
 		font-size: 36px;
 		margin: 0;
