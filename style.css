@@ -111,10 +111,37 @@ ul:hover li:hover ~ li:before {
       rgba(0, 0, 255, .5), 
       rgba(255, 0, 255, .5));
 }
+.brand h1 {
+		font-size: 36px;
+		margin: 0;
+		background: linear-gradient(to right, red, purple);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
 
-.rainbow-text:hover {
-  animation: rainbow-anim 5s infinite;
-}
+
+	.nav {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.nav a {
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		font-size: 16px; /* Reduced the font size */
+		margin-right: 40px;
+		transition: color 0.5s;
+	}
+
+	.nav a.selected {
+		color: white;
+	}
+
+	.nav a:hover {
+		color: linear-gradient(to right, green, blue);
+	}
 
 @keyframes rainbow-anim {
 0% {
@@ -243,10 +270,4 @@ ul:hover li:hover ~ li:before {
 			-webkit-text-fill-color: transparent;
 			font-weight: bold;
 		}
-.animated-element {
-  animation: rainbow-anim 5s infinite;
-  background-clip: border-box; /* or padding-box, content-box */
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
 }
