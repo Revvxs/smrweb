@@ -15,6 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+  // Add an event listener to the current section
   const homeSection = document.getElementById('home');
-  homeSection.classList.add('active');
+  homeSection.addEventListener('click', () => {
+    // Do nothing, keep the home section visible
+  });
+
+  // Add an event listener to the other sections
+  const otherSections = document.querySelectorAll('#games, #about-us');
+  otherSections.forEach((section) => {
+    section.addEventListener('click', () => {
+      // Hide all sections
+      sections.forEach((s) => s.classList.remove('active'));
+      // Show the current section
+      section.classList.add('active');
+    });
+  });
 });
