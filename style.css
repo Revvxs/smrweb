@@ -37,7 +37,7 @@ nav a {
 nav a:hover {
   color: #ccc; /* Nav hover text */
 }
-/*rainbow shit*/
+/*rainbow text shit*/
 .clip-text {
   font-size: 48px;
   background-image: linear-gradient(to right, #FF69B4, #FFC0CB);
