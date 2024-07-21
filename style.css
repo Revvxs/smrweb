@@ -70,3 +70,19 @@ main {
   max-width: 800px;
   margin: auto;
 }
+
+button {
+background-image: linear-gradient(to right, 
+    #D914FD, #C727FA, #B53BF8, #A34EF5, #9162F3, 
+    #7F76F1, #6C89EE, #5A9DEC, #48B1EA, #36C4E7, 
+    #24D8E5, #12EBE2);
+background-size:425px;
+animation: rainbow-strobe-2s infinite;
+width:200px;height:50px;}
+
+@keyframes rainbow-strobe-2s{
+    from{
+        background-position-x:-425px;}
+    to{
+        background-position-x:calc(-425px+var(--width));}
+}
