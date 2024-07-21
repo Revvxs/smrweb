@@ -48,6 +48,23 @@ nav a:hover {
   animation: rainbowGradientAnimation 5s ease infinite;
 }
 
+.clip-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background-image: linear-gradient(to right, #FF69B4, #FFC0CB);
+  background-clip: border-box;
+  height: 1px;
+  width: 100%;
+  animation: rainbowGradientAnimation 5s ease infinite;
+}
+
+.clip-text:hover::after {
+  text-decoration: underline;
+}
+
 /*navbar shit*/
 #navbar {
 	overflow: hidden;
