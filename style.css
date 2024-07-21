@@ -17,8 +17,6 @@ a:hover {
 header {
   padding: 20px;
   text-align: center;
-  display: flex !important;
-  justify-content: space-between !important;
 }
 
 #navbar {
