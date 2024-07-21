@@ -15,11 +15,8 @@ a:hover {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
 #navbar {
