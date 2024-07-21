@@ -20,14 +20,12 @@ header {
 }
 
 
-#oldInfo {
-  font-size: 16px;
-  font-weight: bold;
+.rainbow-strobe {
   position: relative;
   display: inline-block;
 }
 
-#oldInfo span {
+.rainbow-strobe span {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +46,7 @@ header {
   }
 }
 
-#oldInfo:hover {
+.rainbow-strobe:hover {
   animation-play-state: paused;
 }
 
