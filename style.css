@@ -14,11 +14,6 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-  padding: 20px;
-  text-align: center;
-}
-
 #navbar {
 	overflow: hidden;
 	background-color: transparent;
@@ -186,11 +181,6 @@ header {
 	}
 }
 
-#family-tree {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
 @keyframes transparent-rainbow {
 	0% { background-color: rgba(255, 0, 0, 0.8); }
