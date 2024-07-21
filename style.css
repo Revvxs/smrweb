@@ -53,20 +53,6 @@ header nav a:hover {
 	animation: borderRotate 5s ease infinite;
 }
 
-#navbar ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	font: bold 1.5rem sans-serif;
-	color: grey;
-	overflow: hidden;
-	background-color: transparent;
-	transition: top 0.5s;
-	display: block;
-	animation: borderRotate 5s ease infinite;
-	border-radius: 16px;
-}
-
 #navbar ul li {
 	padding: 0 .5em .25em;
 	cursor: pointer;
@@ -127,89 +113,6 @@ header nav a:hover {
 #navbar ul:hover li:hover ~ li:before {
 	translate: -100% 0;
 	transition: .2s .2s, scale 0s .4s;
-}
-
-#navbar @keyframes rainbow-box-shadow-animation {
-	0% {
-		box-shadow:
-			0 8px 16px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 6px 20px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 4px 24px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 2px 28px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 0px 32px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 -2px 36px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 -4px 40px 0 rgba(255, 0, 0, 0.5); /* Red */
-	}
-	14.28% {
-		box-shadow:
-			0 8px 16px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 6px 20px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 4px 24px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 2px 28px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 0px 32px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 -2px 36px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 -4px 40px 0 rgba(255, 165, 0, 0.5); /* Orange */
-	}
-	28.57% {
-		box-shadow:
-			0 8px 16px 0 rgba(255, 255, 0, 0.5), /* Yellow */
-			0 6px 20px 0 rgba(255, 255, 0, 0.5), /* Yellow */
-			0 4px 24px 0 rgba(255, 255, 0, 0.5), /* Yellow */
-			0 2px 28px 0 rgba(255, 255, 0, 0.5), /* Yellow */
-			0 0px 32px 0 rgba(255, 255, 0, 0.5), /* Yellow */
-			0 -2px 36px 0 rgba(255, 255, 0, 0.5), /* Yellow */
-			0 -4px 40px 0 rgba(255, 255, 0, 0.5); /* Yellow */
-	}
-	42.86% {
-		box-shadow:
-			0 8px 16px 0 rgba(0, 128, 0, 0.5), /* Green */
-			0 6px 20px 0 rgba(0, 128, 0, 0.5), /* Green */
-			0 4px 24px 0 rgba(0, 128, 0, 0.5), /* Green */
-			0 2px 28px 0 rgba(0, 128, 0, 0.5), /* Green */
-			0 0px 32px 0 rgba(0, 128, 0, 0.5), /* Green */
-			0 -2px 36px 0 rgba(0, 128, 0, 0.5), /* Green */
-			0 -4px 40px 0 rgba(0, 128, 0, 0.5); /* Green */
-	}
-	57.14% {
-		box-shadow:
-			0 8px 16px 0 rgba(0, 0, 255, 0.5), /* Blue */
-			0 6px 20px 0 rgba(0, 0, 255, 0.5), /* Blue */
-			0 4px 24px 0 rgba(0, 0, 255, 0.5), /* Blue */
-			0 2px 28px 0 rgba(0, 0, 255, 0.5), /* Blue */
-			0 0px 32px 0 rgba(0, 0, 255, 0.5), /* Blue */
-			0 -2px 36px 0 rgba(0, 0, 255, 0.5), /* Blue */
-			0 -4px 40px 0 rgba(0, 0, 255, 0.5); /* Blue */
-	}
-	71.43% {
-		box-shadow:
-			0 8px 16px 0 rgba(139, 0, 255, 0.5), /* Purple */
-			0 6px 20px 0 rgba(139, 0, 255, 0.5), /* Purple */
-			0 4px 24px 0 rgba(139, 0, 255, 0.5), /* Purple */
-			0 2px 28px 0 rgba(139, 0, 255, 0.5), /* Purple */
-			0 0px 32px 0 rgba(139, 0, 255, 0.5), /* Purple */
-			0 -2px 36px 0 rgba(139, 0, 255, 0.5), /* Purple */
-			0 -4px 40px 0 rgba(139, 0, 255, 0.5); /* Purple */
-	}
-	85.71% {
-		box-shadow:
-			0 8px 16px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 6px 20px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 4px 24px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 2px 28px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 0px 32px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 -2px 36px 0 rgba(255, 0, 0, 0.5), /* Red */
-			0 -4px 40px 0 rgba(255, 0, 0, 0.5); /* Red */
-	}
-	100% {
-		box-shadow:
-			0 8px 16px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 6px 20px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 4px 24px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 2px 28px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 0px 32px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 -2px 36px 0 rgba(255, 165, 0, 0.5), /* Orange */
-			0 -4px 40px 0 rgba(255, 165, 0, 0.5); /* Orange */
-	}
 }
 
 @keyframes transparent-rainbow {
