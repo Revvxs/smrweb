@@ -13,7 +13,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-*/ header shit*/
+/*header shit*/
 header {
   padding: 20px;
   text-align: center;
@@ -37,7 +37,7 @@ nav a {
 nav a:hover {
   color: #ccc; /* Nav hover text */
 }
-*/ rainbow shit*/
+/*rainbow shit*/
 .clip-text {
   font-size: 48px;
   background-image: linear-gradient(to right, #FF69B4, #FFC0CB);
@@ -46,7 +46,7 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  animation: transparent-rainbow 5s ease infinite;
+  animation: rainbowGradientAnimation 5s ease infinite;
 }
 
 /*navbar shit*/
