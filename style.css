@@ -71,6 +71,7 @@ nav a:hover {
 	background-color: transparent;
 	transition: top 0.5s;
 	display: block;
+	animation: borderRotate 5s ease infinite;
 }
 
 #navbar ul li {
@@ -116,6 +117,24 @@ nav a:hover {
 	transition: .3s, translate 0s .3s;
 }
 
+#navbar ul:hover li:before {
+	scale: 1;
+}
+
+#navbar ul li:hover:before {
+	translate: 0;
+	transition: .3s;
+}
+
+#navbar ul:hover li:has(~ li:hover):before {
+	translate: 100% 0;
+	transition: .2s .2s, scale 0s .4s;
+}
+
+#navbar ul:hover li:hover ~ li:before {
+	translate: -100% 0;
+	transition: .2s .2s, scale 0s .4s;
+}
 
 @keyframes transparent-rainbow {
 	0% { background-color: rgba(255, 0, 0, 0.8); }
