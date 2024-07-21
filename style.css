@@ -22,11 +22,12 @@ header {
 #navbar {
 	overflow: hidden;
 	background-color: transparent;
-	transition: top 0.5s; 
+	transition: top 0.5s;
 	display: block;
 	animation: borderRotate 5s ease infinite;
 }
-ul {
+
+#navbar ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -34,43 +35,47 @@ ul {
 	color: grey;
 	overflow: hidden;
 	background-color: transparent;
-	transition: top 0.5s; 
+	transition: top 0.5s;
 	display: block;
 	animation: borderRotate 5s ease infinite;
 	border-radius: 16px;
 }
-ul li {
+
+#navbar ul li {
 	padding: 0 .5em .25em;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	transition: .3s;
-background-color: transparent;
-display: block;
+	background-color: transparent;
+	display: block;
 	background: linear-gradient(to right, #ff0000, #d400ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: bold;
 }
-ul li a {
+
+#navbar ul li a {
 	padding: 0 .5em .25em;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	transition: .3s;
-background-color: black;
-display: block;
+	background-color: black;
+	display: block;
 	background: linear-gradient(to right, #ff0000, #d400ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: bold;
 }
-ul li:hover {
+
+#navbar ul li:hover {
 	color: #fff;
 	border-radius: 16px;
 	border: thick;
 }
-ul li:before {
+
+#navbar ul li:before {
 	content: "";
 	position: absolute;
 	inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
@@ -78,22 +83,27 @@ ul li:before {
 	scale: 0 1;
 	transition: .3s, translate 0s .3s;
 }
-ul:hover li:before {
+
+#navbar ul:hover li:before {
 	scale: 1;
 }
-ul li:hover:before {
+
+#navbar ul li:hover:before {
 	translate: 0;
 	transition: .3s;
 }
-ul:hover li:has(~ li:hover):before {
+
+#navbar ul:hover li:has(~ li:hover):before {
 	translate: 100% 0;
-	transition: .2s .2s,scale 0s .4s;
+	transition: .2s .2s, scale 0s .4s;
 }
-ul:hover li:hover ~ li:before {
+
+#navbar ul:hover li:hover ~ li:before {
 	translate: -100% 0;
-	transition: .2s .2s,scale 0s .4s;
+	transition: .2s .2s, scale 0s .4s;
 }
-@keyframes rainbow-box-shadow-animation {
+
+#navbar @keyframes rainbow-box-shadow-animation {
 	0% {
 		box-shadow:
 			0 8px 16px 0 rgba(255, 0, 0, 0.5), /* Red */
@@ -175,6 +185,7 @@ ul:hover li:hover ~ li:before {
 			0 -4px 40px 0 rgba(255, 165, 0, 0.5); /* Orange */
 	}
 }
+
 #family-tree {
 	display: flex;
 	flex-direction: column;
