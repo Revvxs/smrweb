@@ -212,12 +212,6 @@ header nav a:hover {
 	}
 }
 
-#family-tree {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 @keyframes transparent-rainbow {
 	0% { background-color: rgba(255, 0, 0, 0.8); }
 	20% { background-color: rgba(255, 165, 0, 0.8); }
