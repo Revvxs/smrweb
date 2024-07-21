@@ -36,15 +36,142 @@ header {
 }
 
 @keyframes rainbow-stroke {
-  from {
-    background-position-x: -100px;
-  }
-  to {
-    background-position-x: calc(-100px + var(--width));
-  }
+	0% {
+		background: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 165, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	5% {
+		background: linear-gradient(to right, rgba(255, 165, 0, 1), rgba(255, 255, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	10% {
+		background: linear-gradient(to right, rgba(255, 255, 0, 1), rgba(0, 255, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	15% {
+		background: linear-gradient(to right, rgba(0, 255, 0, 1), rgba(0, 255, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	20% {
+		background: linear-gradient(to right, rgba(0, 255, 255, 1), rgba(0, 0, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	25% {
+		background: linear-gradient(to right, rgba(0, 0, 255, 1), rgba(139, 0, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	30% {
+		background: linear-gradient(to right, rgba(139, 0, 255, 1), rgba(255, 0, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	35% {
+		background: linear-gradient(to right, rgba(255, 0, 255, 1), rgba(255, 105, 180, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	40% {
+		background: linear-gradient(to right, rgba(255, 105, 180, 1), rgba(255, 0, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	45% {
+		background: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 165, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	50% {
+		background: linear-gradient(to right, rgba(255, 165, 0, 1), rgba(255, 255, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	55% {
+		background: linear-gradient(to right, rgba(255, 255, 0, 1), rgba(0, 255, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	60% {
+		background: linear-gradient(to right, rgba(0, 255, 0, 1), rgba(0, 255, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	65% {
+		background: linear-gradient(to right, rgba(0, 255, 255, 1), rgba(0, 0, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	70% {
+		background: linear-gradient(to right, rgba(0, 0, 255, 1), rgba(139, 0, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	75% {
+		background: linear-gradient(to right, rgba(139, 0, 255, 1), rgba(255, 0, 255, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	80% {
+		background: linear-gradient(to right, rgba(255, 0, 255, 1), rgba(255, 105, 180, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	85% {
+		background: linear-gradient(to right, rgba(255, 105, 180, 1), rgba(255, 0, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	90% {
+		background: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 165, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	95% {
+		background: linear-gradient(to right, rgba(255, 165, 0, 1), rgba(255, 255, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
+	100% {
+		background: linear-gradient(to right, rgba(255, 255, 0, 1), rgba(0, 255, 0, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: bold;
+	}
 }
 
+
 .rainbow-strobe:hover {
+	float: left;
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
 }
 
 nav ul {
