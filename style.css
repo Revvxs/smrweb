@@ -21,7 +21,7 @@ header {
 
 #navbar {
 	overflow: hidden;
-	background-color: black;
+	background-color: transparent;
 	transition: top 0.5s; 
 	display: block;
 	animation: borderRotate 5s ease infinite;
@@ -33,7 +33,7 @@ ul {
 	font: bold 1.5rem sans-serif;
 	color: grey;
 	overflow: hidden;
-	background-color: black;
+	background-color: transparent;
 	transition: top 0.5s; 
 	display: block;
 	animation: borderRotate 5s ease infinite;
@@ -45,7 +45,7 @@ ul li {
 	position: relative;
 	overflow: hidden;
 	transition: .3s;
-background-color: black;
+background-color: transparent;
 display: block;
 	background: linear-gradient(to right, #ff0000, #d400ff);
 	-webkit-background-clip: text;
@@ -92,48 +92,6 @@ ul:hover li:has(~ li:hover):before {
 ul:hover li:hover ~ li:before {
 	translate: -100% 0;
 	transition: .2s .2s,scale 0s .4s;
-}
-/* Navbar links */
-#navbar a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-	animation: rainbowGradientAnimation 15s ease infinite;
-	
-	}
-#navbar p {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-	animation: rainbowGradientAnimation 15s ease infinite;
-}
-#navbar discord
-{
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-	animation: rainbowGradientAnimation 15s ease infinite;
-}
-#navbar discord:hover
-{
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-	background: blue;
-	-webkit-text-fill-color: transparent;
-	font-weight: bold;
-	
 }
 @keyframes rainbow-box-shadow-animation {
 	0% {
@@ -231,40 +189,6 @@ ul:hover li:hover ~ li:before {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-
-.name {
-	margin-top: 10px;
-}
-
-.children {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	width: 100%;
-}
-#owner 
-{
-	background-color: red;
-}
-#parent1 {
-	background-color: lightblue;
-}
-
-#parent2 {
-	background-color: lightpink;
-}
-
-#child1 {
-	background-color: lightgreen;
-}
-
-#child2 {
-	background-color: yellow;
-}
-
-#child3 {
-	background-color: orange;
 }
 @keyframes transparent-rainbow {
 	0% { background-color: rgba(255, 0, 0, 0.8); }
@@ -402,14 +326,6 @@ ul:hover li:hover ~ li:before {
 			font-weight: bold;
 		}
 	}
-#navbar a:hover {
-	float: left;
-	display: block;
-	color: blue;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-}
 main {
   max-width: 800px;
   margin: auto;
