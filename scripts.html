@@ -5,43 +5,48 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scripts</title>
+    <title>Modding</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        #logo-container {
-            font-size: 24px;
-            font-weight: bold;
+        body {
+            background-color: #000; /* Dark background */
+            color: #fff; /* White text for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-   <h1 style="font-size:18px;color:#0C3764;text-shadow:1px 1px 8px #000;">Not Working</h1>
-    <div id="logo-container"></div>
-
-    <script>
-        const logoContainer = document.getElementById('logo-container');
-        const changeInterval = 50;
-        const logoTexts = [
-            "&#3494E6&lS&#538EDD&lc&#7187D3&lr&#9081CA&li&#AF7BC0&lp&#CD74B7&lt&#EC6EAD&ls"
-        ];
-        let currentIndex = 0;
-
-        function updateLogoText() {
-            const text = logoTexts[currentIndex];
-            logoContainer.innerHTML = '';
-            const regex = /&#([0-9A-F]{6})&l(.)/g;
-            let match;
-            while ((match = regex.exec(text)) !== null) {
-                const span = document.createElement('span');
-                span.style.color = `#${match[1]}`;
-                span.textContent = match[2];
-                logoContainer.appendChild(span);
-            }
-            currentIndex = (currentIndex + 1) % logoTexts.length;
-        }
-
-        setInterval(updateLogoText, changeInterval);
-        updateLogoText(); // Initial call to set the first text
-    </script>
+    <div class="container">
+        <h1>DLLS:</h1>
+         <li style="color:#0C3764;text-shadow:1px 1px 8px #000;">
+        Glitched Studios:
+        <a href="https://discord.gg/glitched-studios" target="_blank" rel="noopener noreferrer">
+            Discord
+        </a>
+    </li>
+   <li style="color:#0C3764;text-shadow:1px 1px 8px #000;">
+        Stellar.gg:
+        <a href="https://discord.gg/4wyQUw6ydB" target="_blank" rel="noopener noreferrer">
+            Discord
+        </a>
+    </li>
+   <li style="color:#0C3764;text-shadow:1px 1px 8px #000;">
+        Bsu Client:
+        <a href="https://discord.gg/bsu" target="_blank" rel="noopener noreferrer">
+            Discord
+        </a>
+    </li>
+<h1>WHY:</h1>
+<li><span style="color:red;">Glitched Studios</span> <span style="color:blue;">is making a very very sexy menu thats why its here</span></li>
+<li><span style="color:red;">Steller.gg</span> <span style="color:blue;">is made by cycy and cycy is very sigma</span></li>
+<li><span style="color:red;">Bsu Client</span> <span style="color:blue;">because it works alot with newer version of gtag copies</span></li>
+    </div>
 </body>
 </html>
