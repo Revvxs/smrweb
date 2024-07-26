@@ -12,14 +12,35 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 110vh;
-            background: linear-gradient(to bottom, blue, black);
-            color: white;
             font-family: Arial, sans-serif;
             text-align: center;
         }
+        *,
+        *::after,
+        *::before {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        :root {
+          --dark-color: #000;
+        }
+        .night {
+          position: fixed;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          width: 100%;
+          height: 100%;
+          filter: blur(0.1vmin);
+          background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px), linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+        }
         .container {
             margin-top: -50px; 
+            position: relative; 
+            z-index: 1; 
+            color: white; 
         }
     </style>
 </head>
@@ -50,4 +71,6 @@
         <li><span style="color:red;">Bsu Client</span> <span style="color:blue;">because it works alot with newer version of gtag copies</span></li>
     </div>
 </body>
+    <div class="night"></div>
+
 </html>
