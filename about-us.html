@@ -45,6 +45,10 @@
   </main>
 
  <button style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background-color: transparent; border: none; color: white; padding: 10px 20px; text-decoration: none; cursor: pointer;" onclick="window.location.href='scripts.html'">Scripts</button>
-<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script type="module">
+  import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new fairyDustCursor();
+</script>
 </body>
 </html>
