@@ -69,16 +69,24 @@
             "&#FF0000G&#FF4000a&#FF7F00m&#FFBF00e&#FFFF00P&#AAFF00u&#55FF00l&#00FF00l&#008080B&#0000FFy&#2600C1n&#4B0082b&#7000ABx&#9400D3o"
         ];
 
-        function updateLogoText() {
-            let index = 0;
+       let currentIndex = 0;
 
-            setInterval(() => {
-                logoContainer.innerHTML = logoTexts[index];
-                index = (index + 1) % logoTexts.length;
-            }, changeInterval);
+        function updateLogoText() {
+            const text = logoTexts[currentIndex];
+            logoContainer.innerHTML = '';
+            const regex = /&#([0-9A-F]{6})&l(.)/g;
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                const span = document.createElement('span');
+                span.style.color = `#${match[1]}`;
+                span.textContent = match[2];
+                logoContainer.appendChild(span);
+            }
+            currentIndex = (currentIndex + 1) % logoTexts.length;
         }
 
-        document.addEventListener('DOMContentLoaded', updateLogoText);
+        setInterval(updateLogoText, changeInterval);
+        updateLogoText(); // Initial call to set the first text
     </script>
 </body>
 </html>
